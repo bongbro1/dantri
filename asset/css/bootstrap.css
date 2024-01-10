@@ -1,0 +1,427 @@
+/*
+Văn Hòa Nguyễn (nguyenvanhoalh@gmail.com)
+
+---
+
+Các kí hiệu của bootstrap gắn với tên class để viết cho các kích thước viewport khác khau
+xs <576px (tiền tố .col-)
+sm ≥576px (tiền tố .col-sm-)
+md ≥768px (tiền tố .col-md-)
+lg ≥992px (tiền tố .col-lg-)
+xl ≥1200px (tiền tố .col-xl-)
+xxl ≥1400px (tiền tố .col-xxl-)
+
+---
+
+Giải thích chia cột của bootstrap
+Bootstrap coi mỗi hàng có thể chia tối đa thành 12 phần nhỏ.
+Vậy nếu muốn chia hàng thành:
++ 2 cột: 12 phần/2 = 6 phần --> tức là mỗi cột gồm 6 phần nhỏ trên tổng 12 phần --> tên class là col-6, col-sm-6, col-md-6, col-lg-6, col-xl-6, col-xxl-6
++ 3 cột: 12 phần/3 = 4 phần --> tức là mỗi cột gồm 4 phần nhỏ trên tổng 12 phần --> tên class là col-4, col-sm-4, col-md-4, col-lg-4, col-xl-4, col-xxl-4
++ 4 cột: 12 phần/4 = 3 phần --> tức là mỗi cột gồm 3 phần nhỏ trên tổng 12 phần --> tên class là col-3, col-sm-3, col-md-3, col-lg-3, col-xl-3, col-xxl-3
++ 6 cột: 12 phần/6 = 2 phần --> tức là mỗi cột gồm 2 phần nhỏ trên tổng 12 phần --> tên class là col-2, col-sm-2, col-md-2, col-lg-2, col-xl-2, col-xxl-2
+
+---
+
+Tuy nhiên nếu muốn chia 5 cột thì sao:
++ 5 cột: 12 phần/5 = 2.4 phần --> số lẻ khó nhớ --> đặt tên luôn là 12d5 (d: division - phân chia) --> tên class là col-12d5, col-sm-12d5, col-md-12d5, col-lg-12d52, col-xl-12d5, col-xxl-12d5
+Nếu muốn có cột rộng gấp 2 lần cột vừa chia thì tên class thêm x + số lần. Ví dụ col-12d5-x2 là cột có kích thước rộng gấp 2 cột col-12d5
+Chúng ta chỉ cần x2 đến x4 vì col-12d5 mà nhân 5 lên thì chính là col-12 luôn khỏi phải viết lại
++ 7 cột: các làm tương tự với 5 cột
++ 8, 9, 10, 11 cột: thường không ai chia chiều ngang web ra bé thế này nên không làm
+*/
+
+
+/*#region Chia 5 cột */
+.col-12d5 {
+    flex: 0 0 auto;
+    width: 20%;
+    max-width: 9999px;
+}
+
+.col-12d5-x2 {   
+    flex: 0 0 auto;
+    width: 40%;
+    max-width: 9999px;
+}
+
+.col-12d5-x3 {
+    flex: 0 0 auto;
+    width: 60%;
+    max-width: 9999px;
+}
+
+.col-12d5-x4 {   
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 9999px;
+}
+/*#endregion */
+
+/*#region Chia 7 cột */
+.col-12d7 {   
+    flex: 0 0 auto;
+    width: 14.285714%;
+    max-width: 9999px;
+}
+
+.col-12d7-x2 { 
+    flex: 0 0 auto;
+    width: 28.571429%;
+    max-width: 9999px;
+}
+
+.col-12d7-x3 { 
+    flex: 0 0 auto;
+    width: 42.857143%;
+    max-width: 9999px;
+}
+
+.col-12d7-x4 { 
+    flex: 0 0 auto;
+    width: 57.142857%;
+    max-width: 9999px;
+}
+
+.col-12d7-x5 {  
+    flex: 0 0 auto;
+    width: 71.428571%;
+    max-width: 9999px;
+}
+
+.col-12d7-x6 {   
+    flex: 0 0 auto;
+    width: 85.714286%;
+    max-width: 9999px;
+}
+/*#endregion */
+
+@media (min-width: 576px) {
+    /*#region Chia 5 cột */
+    .col-sm-12d5 {
+        flex: 0 0 auto;
+        width: 20%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d5-x2 {        
+        flex: 0 0 auto;
+        width: 40%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d5-x3 {        
+        flex: 0 0 auto;
+        width: 60%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d5-x4 {        
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+
+    /*#region Chia 7 cột */
+    .col-sm-12d7 {        
+        flex: 0 0 auto;
+        width: 14.285714%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d7-x2 {        
+        flex: 0 0 auto;
+        width: 28.571429%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d7-x3 {        
+        flex: 0 0 auto;
+        width: 42.857143%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d7-x4 {        
+        flex: 0 0 auto;
+        width: 57.142857%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d7-x5 {        
+        flex: 0 0 auto;
+        width: 71.428571%;
+        max-width: 9999px;
+    }
+
+    .col-sm-12d7-x6 {        
+        flex: 0 0 auto;
+        width: 85.714286%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+}
+
+@media (min-width: 768px) {
+    /*#region Chia 5 cột */
+    .col-md-12d5 {        
+        flex: 0 0 auto;
+        width: 20%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d5-x2 {        
+        flex: 0 0 auto;
+        width: 40%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d5-x3 {
+        flex: 0 0 auto;        
+        width: 60%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d5-x4 {        
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+
+    /*#region Chia 7 cột */
+    .col-md-12d7 {        
+        flex: 0 0 auto;
+        width: 14.285714%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d7-x2 {        
+        flex: 0 0 auto;
+        width: 28.571429%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d7-x3 {        
+        flex: 0 0 auto;
+        width: 42.857143%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d7-x4 {        
+        flex: 0 0 auto;
+        width: 57.142857%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d7-x5 {        
+        flex: 0 0 auto;
+        width: 71.428571%;
+        max-width: 9999px;
+    }
+
+    .col-md-12d7-x6 {        
+        flex: 0 0 auto;
+        width: 85.714286%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+}
+
+@media (min-width: 992px) {
+    /*#region Chia 5 cột */
+    .col-lg-12d5 {        
+        flex: 0 0 auto;
+        width: 20%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d5-x2 {        
+        flex: 0 0 auto;
+        width: 40%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d5-x3 {
+        flex: 0 0 auto;   
+        width: 60%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d5-x4 {        
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+
+    /*#region Chia 7 cột */
+    .col-lg-12d7 {        
+        flex: 0 0 auto;
+        width: 14.285714%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d7-x2 {        
+        flex: 0 0 auto;
+        width: 28.571429%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d7-x3 {        
+        flex: 0 0 auto;
+        width: 42.857143%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d7-x4 {        
+        flex: 0 0 auto;
+        width: 57.142857%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d7-x5 {        
+        flex: 0 0 auto;
+        width: 71.428571%;
+        max-width: 9999px;
+    }
+
+    .col-lg-12d7-x6 {        
+        flex: 0 0 auto;
+        width: 85.714286%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+}
+
+@media (min-width: 1200px) {
+    /*#region Chia 5 cột */
+    .col-xl-12d5 {        
+        flex: 0 0 auto;
+        width: 20%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d5-x2 {        
+        flex: 0 0 auto;
+        width: 40%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d5-x3 {
+        flex: 0 0 auto;        
+        width: 60%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d5-x4 {        
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+
+    /*#region Chia 7 cột */
+    .col-xl-12d7 {        
+        flex: 0 0 auto;
+        width: 14.285714%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d7-x2 {        
+        flex: 0 0 auto;
+        width: 28.571429%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d7-x3 {        
+        flex: 0 0 auto;
+        width: 42.857143%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d7-x4 {        
+        flex: 0 0 auto;
+        width: 57.142857%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d7-x5 {        
+        flex: 0 0 auto;
+        width: 71.428571%;
+        max-width: 9999px;
+    }
+
+    .col-xl-12d7-x6 {        
+        flex: 0 0 auto;
+        width: 85.714286%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+}
+
+@media (min-width: 1400px) {
+    /*#region Chia 5 cột */
+    .col-xxl-12d5 {        
+        flex: 0 0 auto;
+        width: 20%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d5-x2 {        
+        flex: 0 0 auto;
+        width: 40%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d5-x3 {
+        flex: 0 0 auto;        
+        width: 60%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d5-x4 {        
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+
+    /*#region Chia 7 cột */
+    .col-xxl-12d7 {        
+        flex: 0 0 auto;
+        width: 14.285714%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d7-x2 {        
+        flex: 0 0 auto;
+        width: 28.571429%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d7-x3 {        
+        flex: 0 0 auto;
+        width: 42.857143%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d7-x4 {        
+        flex: 0 0 auto;
+        width: 57.142857%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d7-x5 {        
+        flex: 0 0 auto;
+        width: 71.428571%;
+        max-width: 9999px;
+    }
+
+    .col-xxl-12d7-x6 {        
+        flex: 0 0 auto;
+        width: 85.714286%;
+        max-width: 9999px;
+    }
+    /*#endregion */
+}
